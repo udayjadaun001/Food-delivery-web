@@ -1,0 +1,77 @@
+/* first Style*/
+body {
+    font-family: sans-serif;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.app-container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* box */
+.box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Form layout */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+   
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-row input,
+.input-group select {
+    padding: 5px;
+}
+
+/* button */
+button {
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #999;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+
+
+/* Table */
+table {
+    background-color: white;
+}
+
+th {
+    background-color: #ddd;
+}

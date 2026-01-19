@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1 style="text-align: center;">Food Delivery Order Manager</h1>
+
+    <!-- Add Order -->
+        <div class="box add-screen">
+            <h2>Add Order Form</h2>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="rName">Restaurant Name</label>
+                    <input type="text" id="rName" placeholder="e.g. Burger King">
+                </div>
+                <div class="input-group">
+                    <label for="iCount">Item Count</label>
+                    <input type="number" id="iCount" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="dDist">Distance (km)</label>
+                    <input type="number" id="dDist" placeholder="0">
+                </div>
+            </div>
+            <div class="form-row" style="margin-top: 10px;">
+                <label for="isPaid" style="display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" id="isPaid"> Order is Paid?
+                </label>
+                <button onclick="handleAdd()">Add Order</button>
+            </div>
+        </div>
+
+    <!-- Manage Orders  -->
+        <div class="box control-screen">
+            <h2>Manage Orders</h2>
+
+            <div class="form-row">
+    <!--  Filter -->
+                <div class="input-group">
+                    <label for="filterStatus">Status (for Filter)</label>
+                    <select id="filterStatus">
+                        <option value="all">All</option>
+                        <option value="paid">Paid</option>
+                        <option value="unpaid">Unpaid</option>
+                    </select>
+                </div>
+
+    <!--  Distance Input -->
+                <div class="input-group">
+                    <label for="commonDist">Max Distance</label>
+                    <input type="number" id="commonDist" placeholder="Max km" style="width: 120px;">
+                </div>
+
+    <!--  Process Button -->
+                <div style="display: flex; gap: 10px; align-self: flex-end;">
+                    <button onclick="handleProcess()">Filter & Assign</button>
+                </div>
+            </div>
+
+    
+    <!-- Orders List -->
+        <div class="box list-screen">
+            <h2>Orders Listing Screen</h2>
+            <table border="1" width="100%" cellspacing="0" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Restaurant</th>
+                        <th>Items</th>
+                        <th>Status</th>
+                        <th>Distance</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
